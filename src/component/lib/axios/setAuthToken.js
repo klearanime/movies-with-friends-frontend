@@ -1,13 +1,31 @@
-import Axios from "./Axios";
+import Axios from"./Axios"
+
 
 const setAuthToken = (jwtToken) => {
-  console.log("===");
-  console.log(jwtToken);
+  console.log("===")
+  console.log(jwtToken)
   if (jwtToken) {
-    Axios.defaults.headers.common["Authorization"] = `Bearer ${jwtToken}`;
+    Axios.defaults.headers.common["Authorization"] = `Bearer ${jwtToken}`
   } else {
-    delete Axios.defaults.headers.common["Authorization"];
+    delete Axios.defaults.headers.common["Authorization"]
   }
-};
+}
 
-export default setAuthToken;
+
+export default setAuthToken
+
+
+
+// import Axios from "./Axios";
+
+// const setAuthToken = (jwtToken) => {
+//   console.log("===");
+//   console.log(jwtToken);
+//   if (jwtToken) {
+//     Axios.defaults.headers.common["Authorization"] = `Bearer ${jwtToken}`;
+//   } else {
+//     delete Axios.defaults.headers.common["Authorization"];
+//   }
+// };
+
+// export default setAuthToken;

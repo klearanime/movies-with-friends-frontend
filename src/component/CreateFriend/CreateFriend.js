@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+
 import axios from "axios";
-import Axios from "../lib/axios/Axios";
+
+import Axios from "../lib/axios/Axios"
+
+
 export class CreateFriend extends Component {
   state = {
     firstName: "",

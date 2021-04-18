@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { debounce } from "lodash";
 import axios from "axios";
 import { toast } from "react-toastify";
-import Axios from "../lib/axios/Axios";
+
+import Axios from "../lib/axios/Axios"
 
 import "./SignUp.css";
 
@@ -111,7 +112,8 @@ export class SignUp extends Component {
       //   email,
       //   password,
       // });
-      let result = await Axios.post("/users/sign-up", {
+// reassign path, do not need http
+      let result = await Axios.post("/users/sign-up"), {
         firstName,
         lastName,
         email,
