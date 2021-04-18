@@ -113,7 +113,7 @@ export class SignUp extends Component {
       //   password,
       // });
 // reassign path, do not need http
-      let result = await Axios.post("/users/sign-up"), {
+      let result = await Axios.post("/users/sign-up", {
         firstName,
         lastName,
         email,

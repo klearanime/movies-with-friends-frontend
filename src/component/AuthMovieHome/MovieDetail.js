@@ -17,7 +17,7 @@ export class MovieDetail extends Component {
   componentDidMount = async () => {
     try {
       let payload = await axios.get(
-        `http://omdbapi.com/?apikey=6332b1e1&t=${this.props.match.params.title}&plot=full`
+        `http://omdbapi.com/?apikey=d22e2d17&t=${this.props.match.params.title}&plot=full`
       );
 
       let jwtToken = localStorage.getItem("jwtToken");

@@ -3,8 +3,10 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import jwtDecode from "jwt-decode";
 import { checkIsUserLoggedIn } from "../lib/helpers";
-import Axios from "../lib/axios/Axios";
-import setAuthToken from "../lib/axios/setAuthToken";
+
+import Axios from "../lib/axios/Axios"
+import setAuthToken from "../lib/axios/setAuthToken"
+
 
 export class Login extends Component {
   state = {
@@ -34,15 +36,14 @@ export class Login extends Component {
       //   email: this.state.email,
       //   password: this.state.password,
       // });
-
       let result = await Axios.post("/users/login", {
         email: this.state.email,
         password: this.state.password,
-      });
+      })
+      localStorage.setItem("jwtToken", result.data.jwtToken)
+  
+      setAuthToken(result.data.jwtToken)
 
-      localStorage.setItem("jwtToken", result.data.jwtToken);
-
-      setAuthToken(result.data.jwtToken);
 
       let decodedJWTToken = jwtDecode(result.data.jwtToken);
       //console.log(decodedJWTToken);

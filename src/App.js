@@ -12,11 +12,6 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    // console.log("--------");
-    // console.log(process.env);
-    // console.log("==========");
-    // console.log(process.env.NODE_ENV);
-
     let getJwtToken = localStorage.getItem("jwtToken");
 
     //console.log(getJwtToken);
